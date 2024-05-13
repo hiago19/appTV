@@ -19,10 +19,13 @@ class televisor:
             self.volume = 0
 
     def trocaCanal(self, canal):
-        if canal in self.listaCanais:
-            self.canalAtual = canal
+        if canal in self.televisor.listaCanais:
+            self.televisor.trocaCanal(canal)
+            print("Canal atual:", self.televisor.canalAtual)
+        else:
+            print("Canal não disponível.")
 
     def sintonizaCanal(self, canal):
         if canal not in self.listaCanais:
             self.listaCanais.append(canal)
-
+            self.canalAtual = canal

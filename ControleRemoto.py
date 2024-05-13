@@ -12,10 +12,15 @@ class ControleRemoto:
         print("Volume atual:", self.televisor.volume)
 
     def trocaCanal(self, canal):
-        self.televisor.trocaCanal(canal)
-        print("Canal atual:", self.televisor.canalAtual)
+        if self.televisor.listaCanais:
+            if canal in self.televisor.listaCanais:
+                self.televisor.canalAtual = canal
+                print("Canal atual:", self.televisor.canalAtual)
+            else:
+                print("Canal não disponível.")
+        else:
+            print("Não há canais disponíveis. Sintonize um novo canal.")
 
-
-    def sintonizaCanal(self, televisor, canal):
-        televisor.sintonizaCanal(canal)
+    def sintonizaCanal(self, canal):
+        self.televisor.sintonizaCanal(canal)
         print("Canal sintonizado:", self.televisor.canalAtual)
