@@ -23,7 +23,7 @@ Para executar o projeto localmente, siga estas etapas:
 1. Clone o repositório para sua máquina local:
 
    ```bash
-   git clone https://github.com/seu-usuario/appTV.git
+   git clone https://github.com/hiago19/appTV.git
    ```
 
 2. Navegue até o diretório do projeto:
